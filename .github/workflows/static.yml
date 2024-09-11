@@ -39,6 +39,7 @@ jobs:
       run: echo "Running tests"
   
   deploy:
+    needs: test
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
